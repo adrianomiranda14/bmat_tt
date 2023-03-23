@@ -1,0 +1,2 @@
+I have used Polars library as it is a simple method of manipulating the data, while being capable of running on files much larger than available memory. 
+This is due to it using Rust, a low-level language.
