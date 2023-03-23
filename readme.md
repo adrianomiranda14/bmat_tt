@@ -3,9 +3,9 @@
 ## Installation
 
 1. Install Python
-2. Clone the repo using the following code
-`git clone https://github.com/adrianomiranda14/bmat_tt`
-`cd bmat_tt`
+2. Clone the repo using the following code:
+    `git clone https://github.com/adrianomiranda14/bmat_tt`
+    `cd bmat_tt`
 
 3. Install required packages
 `pip install -r requirements.txt`
@@ -15,7 +15,7 @@
 1. Run the Flask server
 `flask run`
 
-this will stay running in a terminal, so open a new terminal
+    This will stay running in a terminal, so open a new terminal
 
 2. run `schedule_file.py` and input the file you want to send for processing from the raw files directory. You will receive a filename for the aggregated data.
 
