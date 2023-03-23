@@ -1,8 +1,8 @@
 import requests
 
-filename = "example_play_data_aggregated.csv"
+filename = input("Type raw filename (e.g. day1.csv)")
 
-with open("raw_files\example_play_data.csv", "rb") as file:
+with open(f"raw_files\{filename}", "rb") as file:
     response = requests.post(
         "http://localhost:5000/schedule_processing/",
         files={"file": file},

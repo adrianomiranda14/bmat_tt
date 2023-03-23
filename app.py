@@ -1,11 +1,12 @@
 import os
 from concurrent.futures import ThreadPoolExecutor
 from flask import Flask, request, send_from_directory, abort
+import uuid
 from task_1 import process_csv
 
 app = Flask(__name__)
-storage_path = "uploaded_files/"
-result_path = "result_files/"
+storage_path = "file_storage/"
+result_path = "aggregate_files/"
 
 executor = ThreadPoolExecutor(max_workers=4)
 
@@ -23,7 +24,7 @@ def schedule_processing():
     file = request.files['file']
     filename = request.form['filename']
     input_file_path = os.path.join(storage_path, filename)
-    output_file_path = os.path.join(result_path, filename)
+    output_file_path = os.path.join(result_path, str(uuid.uuid4()) + ".csv")
 
     os.makedirs(storage_path, exist_ok=True)
     os.makedirs(result_path, exist_ok=True)
