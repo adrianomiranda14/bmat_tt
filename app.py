@@ -1,7 +1,7 @@
 import os
 from concurrent.futures import ThreadPoolExecutor
 from flask import Flask, request, send_from_directory, abort
-from process_csv_polars import process_csv_polars
+from task_1 import process_csv
 
 app = Flask(__name__)
 storage_path = "uploaded_files/"
@@ -10,7 +10,7 @@ result_path = "result_files/"
 executor = ThreadPoolExecutor(max_workers=4)
 
 def process_file(input_file, output_file):
-    process_csv_polars(input_file, output_file)
+    process_csv(input_file, output_file)
 
 @app.route('/schedule_processing/', methods=['POST'])
 def schedule_processing():
