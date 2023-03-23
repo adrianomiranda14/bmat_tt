@@ -5,10 +5,8 @@
 1. Install Python
 2. Clone the repo using the following code:
 ```
-{
     git clone https://github.com/adrianomiranda14/bmat_tt
     cd bmat_tt
-}
 ```
 3. Install required packages
 `pip install -r requirements.txt`
